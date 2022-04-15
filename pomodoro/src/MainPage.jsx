@@ -1,20 +1,30 @@
+import ChangeTimer from "./ChangeTimer";
 import CountdownClock from "./CountdownClock";
 import { Box, Grid, Typography } from "@mui/material";
 
 function MainPage() {
   return (
-    <Box sx={{ textAlign: "center" }}>
-      <Grid>
-        <Grid item xs={12}>
-          <Typography>Pomodoro title / name</Typography>
+    <Box
+      sx={{
+        p: 5,
+        width: "fill",
+        height: "fill",
+        backgroundColor: "primary.light",
+      }}
+    >
+      <Box
+        sx={{ textAlign: "center", backgroundColor: "secondary.dark", p: 5 }}
+      >
+        <Grid>
+          <Grid item xs={12}>
+            <Typography variant="h2">Pomodoro timer</Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <ChangeTimer />
+            <CountdownClock />
+          </Grid>
         </Grid>
-        <Grid item xs={12}>
-          <CountdownClock />
-        </Grid>
-        <Grid item xs={12}>
-          <Typography>Start / Stop Button</Typography>
-        </Grid>
-      </Grid>
+      </Box>
     </Box>
   );
 }
