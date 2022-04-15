@@ -1,3 +1,4 @@
+import CountdownClock from "./CountdownClock";
 import { Box, Grid, Typography } from "@mui/material";
 
 function MainPage() {
@@ -8,7 +9,7 @@ function MainPage() {
           <Typography>Pomodoro title / name</Typography>
         </Grid>
         <Grid item xs={12}>
-          <Typography>Timer (how?)</Typography>
+          <CountdownClock />
         </Grid>
         <Grid item xs={12}>
           <Typography>Start / Stop Button</Typography>
